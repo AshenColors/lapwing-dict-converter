@@ -22,8 +22,9 @@ with open("converted-lapwing-base.json", "w", encoding="UTF-8") as converted_jso
         entries = ijson.kvitems(base, "")
         for k, v in entries:
             # print(f"k: {k}, v: {v}")
-            if "&" in k and any(str(n) in k for n in range(10)):
+            if "{&" in v and (any(str(n) in k for n in range(10)) or "#" in k):
                 # we don't want this entry, skip it
+                print("skipping glue")
                 continue
             if any(str(n) in k for n in range(10)):
                 new_k = "+" + k
