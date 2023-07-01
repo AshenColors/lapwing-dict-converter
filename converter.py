@@ -3,6 +3,7 @@ from pathlib import Path
 
 BASE_DICT = Path.cwd() / "steno-dictionaries" / "lapwing-base.json"
 NUMBER_DEFS = {
+    "#": "",
     "1": "S",
     "2": "T",
     "3": "P",
@@ -26,7 +27,7 @@ with open("converted-lapwing-base.json", "w", encoding="UTF-8") as converted_jso
                 # we don't want this entry, skip it
                 print("skipping glue")
                 continue
-            if any(str(n) in k for n in range(10)):
+            if any(str(n) in k for n in range(10)) or "#" in k:
                 new_k = "+" + k
                 for number, stenokey in NUMBER_DEFS.items():
                     new_k = new_k.replace(number, stenokey)
