@@ -25,7 +25,6 @@ with open("converted-lapwing-base.json", "w", encoding="UTF-8") as converted_jso
             # print(f"k: {k}, v: {v}")
             if "{&" in v and (any(str(n) in k for n in range(10)) or "#" in k):
                 # we don't want this entry, skip it
-                print("skipping glue")
                 continue
             if any(str(n) in k for n in range(10)) or "#" in k:
                 new_k = "+" + k
