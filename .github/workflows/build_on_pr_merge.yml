@@ -25,6 +25,9 @@ jobs:
       - name: Build
         run: pipenv run python converter.py
       - name: Release
-        uses: softprops/action-gh-release@v1
+      - uses: ncipollo/release-action@v1
         with:
-          files: converted-lapwing-base.json
+          artifacts: 'converted-lapwing-base.json'
+          commit: 'master'
+          makeLatest: 'true'
+          draft: 'true'
