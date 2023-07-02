@@ -35,3 +35,4 @@ jobs:
           makeLatest: 'true'
           prerelease: 'false'
           allowUpdates: 'true'
+          body: 'Automatically generated dictionary based on the latest available lapwing-base.json uploaded to the upstream repo. Should be always up to date.'
