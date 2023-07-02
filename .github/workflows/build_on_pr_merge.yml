@@ -28,6 +28,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: 'converted-lapwing-base.json'
+          tag: 'latest_update'
           commit: 'master'
           makeLatest: 'true'
           draft: 'true'
