@@ -33,4 +33,4 @@ jobs:
           tag: 'latest_update'
           commit: 'master'
           makeLatest: 'true'
-          prerelease: 'true'
+          prerelease: 'false'
