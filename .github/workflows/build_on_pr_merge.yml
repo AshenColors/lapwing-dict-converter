@@ -34,3 +34,4 @@ jobs:
           commit: 'master'
           makeLatest: 'true'
           prerelease: 'false'
+          allowUpdates: 'true'
