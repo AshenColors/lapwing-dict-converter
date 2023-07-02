@@ -25,7 +25,7 @@ jobs:
       - name: Build
         run: pipenv run python converter.py
       - name: Release
-      - uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v1
         with:
           artifacts: 'converted-lapwing-base.json'
           commit: 'master'
