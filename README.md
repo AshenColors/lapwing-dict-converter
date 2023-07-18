@@ -1,8 +1,5 @@
-Goals:
+This repository hosts a script and build chain meant to produce alternative versions of the Lapwing base dictionary by Aerick.
 
-input the Aerick base dictionary
-remove all entries with a number and the glue operator &
-for all other entries with a number:
-convert all stroke numbers into their key equivalent
-add a + to the beginning of the stroke
-write the to a new file
+Currently there is one variant, converted-lapwing-base.json, which replaces the # for proper nouns with the + from the Extended Stenotype plugin.
+
+TODO: `"\+(.*?)(\/.*)?":` to produce a version where # is replaced with duplication of the first stroke instead for compatibility with non-extended steno setups.
